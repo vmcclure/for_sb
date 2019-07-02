@@ -1,0 +1,15 @@
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\bin\Release\Test_projekt.exe.config
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\bin\Release\Test_projekt.exe
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\bin\Release\Test_projekt.pdb
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\Test_projekt.csprojAssemblyReference.cache
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\MainWindow.g.cs
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\App.g.cs
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\Test_projekt_MarkupCompile.cache
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\Test_projekt_MarkupCompile.lref
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\MainWindow.baml
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\Test_projekt.g.resources
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\Test_projekt.Properties.Resources.resources
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\Test_projekt.csproj.GenerateResource.cache
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\Test_projekt.csproj.CoreCompileInputs.cache
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\Test_projekt.exe
+D:\code\test_projekt\Test_Projekt\staj\Test_projekt\obj\Release\Test_projekt.pdb
