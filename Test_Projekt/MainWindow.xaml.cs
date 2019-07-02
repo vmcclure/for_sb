@@ -57,7 +57,7 @@ namespace Test_projekt
             {
                 Logic.str.Clear();
                 Logic.filename = dlg.FileName;
-                StreamReader myFile = new StreamReader(Logic.filename, Encoding.GetEncoding(1251));
+                StreamReader myFile = new StreamReader(Logic.filename, GetFileEncoding());
                 Logic.textBox.Text = null;
                 Logic.textBox.Clear();
                 Logic.inic = 1;
@@ -73,6 +73,37 @@ namespace Test_projekt
 
             }
         }
+        public static Encoding GetFileEncoding()
+        {
+            Encoding encoding = Encoding.Default;
+            using (FileStream stream = File.OpenRead(Logic.filename))
+            {
+                byte[] buff = new byte[5];
+                stream.Read(buff, 0, buff.Length);
+                if (buff[0] == 0xEF && buff[1] == 0xBB && buff[2] == 0xBF)
+                {
+                    encoding = Encoding.UTF8;
+                }
+                else if (buff[0] == 0xFE && buff[1] == 0xFF)
+                {
+                    encoding = Encoding.BigEndianUnicode;
+                }
+                else if (buff[0] == 0xFF && buff[1] == 0xFE)
+                {
+                    encoding = Encoding.Unicode;
+                }
+                else if (buff[0] == 0 && buff[1] == 0 && buff[2] == 0xFE && buff[3] == 0xFF)
+                {
+                    encoding = Encoding.UTF32;
+                }
+                else if (buff[0] == 0x2B && buff[1] == 0x2F && buff[2] == 0x76)
+                {
+                    encoding = Encoding.UTF7;
+                }
+            }
+            return encoding;
+        }
+
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (Logic.textBox == null)
@@ -109,6 +140,7 @@ namespace Test_projekt
           if (Logic.fileinmem == 1)
             {
                 Logic.pair = 0;
+
                 for (int n = 0; n < Logic.comboBox.Length; n++)
                     if (Logic.comboBox[n] != 0)
                         Logic.textBox.Clear();
