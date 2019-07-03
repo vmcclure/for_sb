@@ -75,7 +75,7 @@ namespace Test_projekt
         }
         public static Encoding GetFileEncoding()
         {
-            Encoding encoding = Encoding.Default;
+            Encoding encoding = Encoding.GetEncoding(1251);
             using (FileStream stream = File.OpenRead(Logic.filename))
             {
                 byte[] buff = new byte[5];
